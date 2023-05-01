@@ -5,7 +5,7 @@ html,body{ width: 100%; height: 100%; }
 h1,h2{ text-indent: -9999px; }
 #wrapper{ 
     width: 100%; height: 100%; 
-    margin: 0 auto; overflow: hidden; 
+    margin: 150px auto; overflow: hidden; 
 }
 
 /* -----story section----- */
@@ -35,7 +35,7 @@ h1,h2{ text-indent: -9999px; }
 }
 .img_bottom04{
     width: 200px; height: 245px; margin: 0 auto;
-    position: absolute; left: 50%; bottom: 50%;
+    position: absolute; left: 50%; bottom: 45%;
     transform: translateX(-50%); z-index: 10;
 }
 
@@ -43,13 +43,13 @@ h1,h2{ text-indent: -9999px; }
     width: 200px; height: 50px; background: #F6C4C5;
     border-radius: 30px; border: 0; margin: 10px auto; 
     font-size: 24px; font-weight: bold; color: #fff;
-    position: absolute; left: 50%; bottom: 42%;
+    position: absolute; left: 50%; bottom: 37%;
     transform: translateX(-50%); z-index: 10000; 
 }
 .innerbox{
     width: 280px; height: 100px; margin: 0 auto; 
     border: 3px solid #F6C4C5; background: #fff;
-    position: absolute; left: 50%; bottom: 40%;
+    position: absolute; left: 50%; bottom: 35%;
     transform: translateX(-50%); z-index: 10000;
 }
 .innerbox>p{
@@ -89,8 +89,13 @@ h1,h2{ text-indent: -9999px; }
 }
 .rule_box>.number>.num{ font-size: 35px; padding-top: 40px; }
 
+
  /* mobile */
-@media screen and ( max-width:640px ){
+@media screen and ( min-width: 320px ) and ( max-width: 760px ){
+    #wrapper{ 
+        width: 100%; height: 100%; 
+        margin: 0 auto; overflow: hidden; 
+    }
     .start{
         position: absolute; left: 50%; bottom: 15%;
     }
