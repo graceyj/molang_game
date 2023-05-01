@@ -88,3 +88,16 @@ h1,h2{ text-indent: -9999px; }
     color: #fff; text-align: center;
 }
 .rule_box>.number>.num{ font-size: 35px; padding-top: 40px; }
+
+ /* mobile */
+@media screen and ( max-width:640px ){
+    .start{
+        position: absolute; left: 50%; bottom: 15%;
+    }
+    .innerbox{
+        position: absolute; left: 50%; bottom: 15%;
+    }
+    .img_bottom04{
+        position: absolute; left: 50%; bottom: 30%;
+    }
+}
