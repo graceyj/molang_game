@@ -1,21 +1,23 @@
 @charset "utf-8";
 body,section,h1,h2,button,img{ display: block; margin: 0; padding: 0; }
-body{ background: #fff; overflow: hidden; }
-html,body{ width: 100%; height: 100%; }
+body{ background: #EC7881; overflow: hidden; }
+html,body{ width: 100vw; height: 100vh; }
 h1,h2{ text-indent: -9999px; }
 #wrapper{ 
-    width: 100%; height: 100%; 
-    margin: 5% auto; overflow: hidden; 
+    width: 640px; height: 100%; 
+    margin: 0 auto; overflow: hidden; 
+    background: #fff;
 }
 
 /* -----story section----- */
-#sect01{ display: block; }
+#sect01{ display: block; position: relative; }
 #sect02, #sect03, #sect04, #sect05{ display: none; }
 .img_top01{
     width: 100%; height: auto; margin: 0 auto;
 }
 .img_top01>img{
-    display: block; width: 348px; height: 450px; margin: 0 auto;
+    width: 348px; height: 450px; 
+    margin: 0 auto; display: block; 
 }
 .img_top02{
     width: 330px; height: 330px; margin: 10% auto;
@@ -24,32 +26,32 @@ h1,h2{ text-indent: -9999px; }
     width: 300px; height: 300px; margin: 10% auto;
 }
 .img_top04{
-    width: 200px; height: 200px; margin: 12% auto;
+    width: 200px; height: 200px; margin: 15% auto;
 }
 
 .img_bottom01{
     width: 320px; height: 140px; margin: 0 auto;
 }
 .img_bottom01>img{
-    display: block; width: 320px; height: 140px;
+    width: 320px; height: 140px; display: block; 
 }
 .img_bottom04{
     width: 200px; height: 245px; margin: 0 auto;
-    position: absolute; left: 50%; bottom: 45%;
-    transform: translateX(-50%); z-index: 10;
+    position: absolute; left: 50%; top: 25%;
+    transform: translateX(-50%); z-index: 100;
 }
 
 .start{
     width: 200px; height: 50px; background: #F6C4C5;
-    border-radius: 30px; border: 0; margin: 10px auto; 
+    border-radius: 30px; border: 0; margin: 0 auto; 
     font-size: 24px; font-weight: bold; color: #fff;
-    position: absolute; left: 50%; bottom: 37%;
+    position: absolute; left: 50%; top: 75%;
     transform: translateX(-50%); z-index: 10000; 
 }
 .innerbox{
     width: 280px; height: 100px; margin: 0 auto; 
     border: 3px solid #F6C4C5; background: #fff;
-    position: absolute; left: 50%; bottom: 30%;
+    position: absolute; left: 50%; top: 50%;
     transform: translateX(-50%); z-index: 10000;
 }
 .innerbox>p{
@@ -92,17 +94,15 @@ h1,h2{ text-indent: -9999px; }
 
  /* mobile */
 @media screen and ( min-width: 320px ) and ( max-width: 760px ){
+    body{ background: #fff; overflow: hidden; }
     #wrapper{ 
         width: 100%; height: 100%; 
         margin: 0 auto; overflow: hidden; 
     }
-    .start{
-        position: absolute; left: 50%; bottom: 15%;
-    }
     .innerbox{
-        position: absolute; left: 50%; bottom: 15%;
+        position: absolute; left: 50%; top: 70%;
     }
     .img_bottom04{
-        position: absolute; left: 50%; bottom: 30%;
+        position: absolute; left: 50%; top: 30%;
     }
 }
