@@ -6,7 +6,7 @@ $(function(){
         $('#sect02').show();
     });
     
-    $('#sect02, #sect03').click(function(){
+    $('#sect02, #sect03, #sect05').click(function(){
         $(this).hide().next().show();
     }); 
     
