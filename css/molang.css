@@ -114,3 +114,78 @@ h1,h2{ text-indent: -9999px; }
 }
 
 /* -----main section----- */
+#game_play{
+    position: relative;
+}
+.play_area{
+    width: 300px; height: 350px; margin: 0 auto;
+    background:url("../imgs/frame_clear.png") no-repeat;
+    background-size: contain;
+    position: absolute; left: 50%; top: 10%;
+    transform: translateX(-50%); z-index: 0;
+}
+.play_hole{
+    width: 270px; height:270px; margin: 10% auto;
+    display:flex; flex-flow:row wrap; 
+    justify-content:space-around; 
+    align-content:space-around;
+}
+.play_hole>div{
+    width: 80px; height: 80px; 
+    border: 1px solid #ccc;
+    border-radius: 50%; 
+    background: #ADADAD;
+}
+.pop{ width: 100%; height: 100%; }
+.pop>img{ display: none; }
+
+.score_area{ 
+    width: 300px; height: auto; margin: 0 auto;
+    position: relative;
+}
+.score_area>.b_left{ width: 130px; height: 174px; }
+.score_area>.b_left>.left_logo{
+    width: 110px; height: 20px;
+    position: absolute; right: 55%; bottom: -25%;
+    z-index: 10;
+}
+.score_area>.b_left>.move_molang{
+    width: 125px; height: 115px;
+    position:absolute; right: 54%; bottom: -65%;
+    z-index: 100;
+}
+.molang>img{ width: 125px; height: 115px;}
+.m1,.m2{ display: none; }
+
+.score_area>.b_right{ 
+    width: 150px; height: 170px; 
+}
+.score_area>.b_right>.m_portion{
+    width: 150px; height: 50px; background: #F1A0A9;
+    border: 3px solid #F6C4C5; z-index: 10;
+    position: absolute; left: 48%; bottom: -30%;
+}
+.mol{
+    width: 35px; height: 42px; margin: 4px auto;
+    float: left; padding-left: 11px;
+}
+.mol>img{ width: 35px; height: 42px; }
+.score_area>.b_right>.time_box,
+.score_area>.b_right>.score_box {
+    width: 150px; height: 50px; background: #fff;
+    border: 3px solid #F6C4C5; z-index: 10;
+    position: absolute; left: 48%;
+}
+.score_area>.b_right>.time_box { bottom: -47%; }
+.score_area>.b_right>.score_box { bottom: -64%; }
+.time_box>h3,
+.score_box>h3{
+    font-size: 24px; font-weight: bold; 
+    color:#EC7881; float: left; 
+    margin-top: 13px; margin-left: 5px;
+}
+.time, .score{
+    font-size: 30px; font-weight:bold; 
+    color:#18A0FB; float: right;
+    margin-top: 10px; margin-right: 20px;
+}
