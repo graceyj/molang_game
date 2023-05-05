@@ -123,19 +123,35 @@ h1,h2{ text-indent: -9999px; }
     transform: translateX(-50%); z-index: 0;
 }
 .play_hole{
-    width: 270px; height:270px; margin: 10% auto;
+    width: 270px; height: 270px; margin: 15% auto;
     display:flex; flex-flow:row wrap; 
     justify-content:space-around; 
     align-content:space-around;
 }
 .play_hole>div{
-    width: 80px; height: 80px; 
+    width: 79px; height: 79px;
     border: 1px solid #ccc;
     border-radius: 50%; 
     background: #ADADAD;
 }
-.pop{ width: 100%; height: 100%; }
-.pop>img{ display: none; }
+.play_wrap{
+    width: 270px; height: 270px; margin: 0 auto;
+    display:flex; flex-flow:row wrap; 
+    justify-content:space-around; 
+    align-content:space-around;
+    position: absolute; left: 5%; top: -10%;
+}
+.play_wrap>div{
+    width: 80px; height: 80px;
+}
+.pop{
+    width: 80px; height: 80px;
+    align-items: center;
+}
+.pop>img{
+    width: 80px; height: 80px; 
+    display: none;
+}
 
 .score_area{ 
     width: 300px; height: auto; margin: 0 auto;
@@ -144,12 +160,12 @@ h1,h2{ text-indent: -9999px; }
 .score_area>.b_left{ width: 130px; height: 174px; }
 .score_area>.b_left>.left_logo{
     width: 110px; height: 20px;
-    position: absolute; right: 55%; bottom: -25%;
+    position: absolute; left: 5%; bottom: -25%;
     z-index: 10;
 }
 .score_area>.b_left>.move_molang{
     width: 125px; height: 115px;
-    position:absolute; right: 54%; bottom: -65%;
+    position:absolute; left: 2%; bottom: -65%;
     z-index: 100;
 }
 .molang>img{ width: 125px; height: 115px;}
@@ -158,10 +174,10 @@ h1,h2{ text-indent: -9999px; }
 .score_area>.b_right{ 
     width: 150px; height: 170px; 
 }
-.score_area>.b_right>.m_portion{
+.score_area>.b_right>.life{
     width: 150px; height: 50px; background: #F1A0A9;
     border: 3px solid #F6C4C5; z-index: 10;
-    position: absolute; left: 48%; bottom: -30%;
+    position: absolute; left: 46%; bottom: -30%;
 }
 .mol{
     width: 35px; height: 42px; margin: 4px auto;
@@ -172,7 +188,7 @@ h1,h2{ text-indent: -9999px; }
 .score_area>.b_right>.score_box {
     width: 150px; height: 50px; background: #fff;
     border: 3px solid #F6C4C5; z-index: 10;
-    position: absolute; left: 48%;
+    position: absolute; left: 46%;
 }
 .score_area>.b_right>.time_box { bottom: -47%; }
 .score_area>.b_right>.score_box { bottom: -64%; }
