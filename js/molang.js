@@ -1,4 +1,5 @@
 $(function(){
+    $(document).on('touchstart', function(){});
     $('html,body').animate({scrollTop:'5px'}, 300);
     
     $('.start').click(function(){
@@ -18,8 +19,6 @@ $(function(){
             $('#sect05').show();
         });
     });
-
-    $(document).on('touchstart', function(){});
     
     let second=20;
     let score=0;
@@ -27,12 +26,12 @@ $(function(){
     let counter;
     let num=0;
     let life=3;
-    let clickable=false;
+    let clickable=false; //연속 클릭 방지 상태변수
 
     for (let i = 0; i < 9; i++){
         let div = $(`<div class="c${i}"></div>`);
         $('.play_hole').append(div);
-    }       
+    } 
 
     function randomTarget(){
         let num = Math.floor(Math.random() * 9);
@@ -43,17 +42,18 @@ $(function(){
         selectTarget.find('img').stop().fadeIn(100).delay(500).fadeOut(100); // 선택된 요소의 "img" 태그를 깜박이게 함
         clickable=true;
     }
-
     timer=setInterval(randomTarget,1000);
-    $('.pop>img').on('click',function(){ 
-        if(clickable){
-            score++;
-            $('#game_play>.score').text(score);
-            clickable=false;
-        }
-    });
 
-    $('.st').on('click', function(){
+    
+    $('.do10>img').on('click', function(){ 
+        if (clickable){
+            score += 10;
+            $('.score').text(score);
+            clickable = false;
+        }
+    });      
+
+    $('.st>img').on('click', function(){
         if(clickable && changeNum === 0){
             life--;
             $('.mol>img').eq(-1).remove(); // 마지막 자식 요소 삭제
