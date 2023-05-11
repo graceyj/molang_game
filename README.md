@@ -1,3 +1,3 @@
-## molang game
+## 몰랑이 게임 (molang game)
 
-몰랑이 게임
+제이쿼리로 구현한 게임
